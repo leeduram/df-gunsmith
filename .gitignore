@@ -1,0 +1,21 @@
+# 비밀 정보 (절대 올리지 않음)
+cloudflare.txt
+mysql.cnf
+setup_db.sql
+
+# 백업, 임시, 내려받은 원본
+_old_r*/
+_to_delete/
+keep/
+raw/
+steamcmd/
+.wrangler/
+*.log
+global_pin.txt
+
+# 설치하면 다시 생기는 것
+tools/node_modules/
+
+# 자동 생성되는 결과물과 게임 이미지 (용량이 크고, 이미지는 게임사 저작물)
+web/img/
+web/w/

@@ -1,0 +1,21 @@
+# Cloudflare Pages response headers (this file is read by Cloudflare, not shown on the site)
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+
+/data/*
+  Cache-Control: no-cache
+
+/img/*
+  Cache-Control: public, max-age=3600
+
+# app.js and style.css are always loaded as app.js?v=<content hash> (collect.ps1 step 6c), so a changed file
+# has a new address: browsers may keep them without asking again
+/app.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/style.css
+  Cache-Control: public, max-age=31536000, immutable
